@@ -1,0 +1,21 @@
+# 本地便携构建工具链（约 1.1GB：JDK / Android SDK / 下载缓存），不入库
+.build_android/
+
+# WorkBuddy 本地项目数据与记忆日志
+.workbuddy/
+
+# APK v4 签名临时产物与自签名私钥（build.sh 内含本地演示口令）
+*.idsig
+*.keystore
+*.jks
+
+# 本地构建中间产物（不入库，可由 android/build.sh 重新生成）
+android/project/classes/
+android/project/classes.dex
+android/project/res.zip
+android/project/base.apk
+android/project/unsigned.apk
+android/project/aligned.apk
+
+# macOS
+.DS_Store

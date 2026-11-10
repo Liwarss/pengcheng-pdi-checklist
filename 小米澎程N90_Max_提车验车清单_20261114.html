@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小米澎程 N90 Max 提车验车清单 · 2026-11-14（周六）</title>
+<style>
+  :root{
+    --ink:#1c2128; --sub:#5a6572; --line:#e3e8ee; --bg:#f5f7fa; --card:#ffffff;
+    --red:#c8362f; --redbg:#fdf0ef; --amber:#a86a12; --amberbg:#fff7e8;
+    --green:#1f7a52; --greenbg:#edf8f2; --blue:#1d5fa8; --bluebg:#eef4fc;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .wrap{max-width:960px;margin:0 auto;padding:20px 16px 80px}
+  header{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:16px}
+  h1{font-size:24px;margin:0 0 8px;letter-spacing:.3px}
+  .meta{color:var(--sub);font-size:13px;line-height:1.9}
+  .rule{margin-top:14px;padding:12px 14px;background:var(--redbg);border-left:4px solid var(--red);border-radius:6px;font-weight:700;color:var(--red);font-size:15px}
+  .progress{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+  .bar{flex:1;height:8px;background:#e9edf2;border-radius:99px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--green);transition:width .2s}
+  .count{font-size:13px;color:var(--sub);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .btn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 10px;font-size:12px;color:var(--sub);cursor:pointer}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:16px}
+  h2{font-size:18px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px}
+  h2 .no{font-size:13px;color:#fff;background:var(--ink);border-radius:5px;padding:2px 8px;letter-spacing:1px}
+  .hint{color:var(--sub);font-size:13px;margin:0 0 14px}
+  .item{display:flex;gap:12px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:9px;cursor:pointer;transition:.15s;break-inside:avoid}
+  .item:hover{border-color:#c9d3de;background:#fbfcfe}
+  .item.done{background:#f7faf8;border-color:#d9e9df}
+  .item.done .t{color:var(--sub);text-decoration:line-through;text-decoration-color:#9fb3a7}
+  .item input{appearance:none;width:20px;height:20px;flex:0 0 20px;border:2px solid #b9c4d0;border-radius:5px;margin-top:2px;cursor:pointer;position:relative;background:#fff}
+  .item input:checked{background:var(--green);border-color:var(--green)}
+  .item input:checked::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(42deg)}
+  .body{flex:1;min-width:0}
+  .t{font-weight:700;font-size:14.5px;margin-bottom:6px}
+  .t .n{display:inline-block;min-width:26px;color:var(--sub);font-weight:500;font-variant-numeric:tabular-nums}
+  .row{display:flex;gap:8px;font-size:13.5px;line-height:1.6;margin-top:3px}
+  .k{flex:0 0 62px;color:var(--sub)}
+  .v{flex:1}
+  .v.ok{color:var(--green);font-weight:600}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:4px;margin-left:6px;vertical-align:1px}
+  .tag.hi{background:var(--redbg);color:var(--red)}
+  .tag.mid{background:var(--amberbg);color:var(--amber)}
+  .tag.info{background:var(--bluebg);color:var(--blue)}
+  .note{background:var(--amberbg);border-left:3px solid var(--amber);padding:10px 13px;border-radius:6px;font-size:13.5px;margin:12px 0 0;color:#6b4a12}
+  .intel{border-left:3px solid var(--blue);padding:9px 0 9px 13px;margin-bottom:10px}
+  .intel b{color:var(--blue)}
+  .intel .d{font-size:12px;color:var(--sub);font-variant-numeric:tabular-nums}
+  .redline{background:var(--redbg);border:1px solid #f0cdc9;border-radius:10px;padding:14px 18px}
+  .redline li{margin:6px 0;font-size:14px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+  th{background:#f7f9fb;color:var(--sub);font-weight:600}
+  textarea{width:100%;min-height:90px;border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit;resize:vertical}
+  .src{font-size:12.5px;color:var(--sub);line-height:1.9;word-break:break-all}
+  .src a{color:var(--blue);text-decoration:none}
+  footer{color:var(--sub);font-size:12.5px;text-align:center;padding:8px 10px 30px;line-height:1.8}
+  @media print{
+    body{background:#fff;font-size:12px}
+    .wrap{max-width:none;padding:0}
+    .no-print{display:none!important}
+    .progress{display:none}
+    section,header{box-shadow:none;border:1px solid #ccc;border-radius:0;margin-bottom:10px;padding:12px}
+    .item{padding:7px 9px;margin-bottom:5px}
+    h1{font-size:19px}
+    h2{font-size:15px}
+  }
+  @media(max-width:600px){
+    .wrap{padding:12px 10px 60px} section{padding:15px 13px} header{padding:16px}
+    h1{font-size:20px} .row{flex-direction:column;gap:0} .k{flex:none;font-size:12px;color:var(--blue)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>小米澎程 N90 Max 提车验车清单</h1>
+  <div class="meta">
+    提车日期：2026 年 11 月 14 日（周六）　|　车型：N90 Max 大七座旗舰增程 SUV（26.99 万起；探索版 29.99 万）<br>
+    编制依据：截至 2026-11-10 的车主提车作业、车质网/汽车投诉网投诉、媒体报道、小米官方交付政策，以及新车通用 PDI 验车标准<br>
+    建议时长：预留 60–90 分钟，最好带 1 位同伴（看灯光、踩刹车、站车后测雷达都要两个人）
+  </div>
+  <div class="rule">核心原则：先验车、后签字、再付款。任何一项存疑，先写进交付单再谈，绝不签空白单。</div>
+</header>
+
+<div class="progress no-print">
+  <span class="count" id="cnt">已确认 0 / 0</span>
+  <div class="bar"><i id="fill"></i></div>
+  <button class="btn" id="reset">重置勾选</button>
+</div>
+
+<section>
+  <h2><span class="no">情报</span>一、本周网上最新消息（决定了这份清单的重点）</h2>
+  <p class="hint">以下为公开渠道信息，车主反馈与投诉属个案，非官方质量结论；截至 11/10 未检索到 N90 的官方召回公告。但它们是「现场应该多按几次」的最佳依据。</p>
+
+  <div class="intel"><span class="d">11-09</span>　<b>产能爬坡快：</b>澎程系列单月交付 27,132 台，其中 N90 交付 12,587 台。首批车装配一致性值得多花时间查，别只绕车看一圈漆。<span class="d">（百度百科/公开销量口径）</span></div>
+  <div class="intel"><span class="d">11-03</span>　<b>底盘重点：</b>车质网投诉 1817363，N90 Max 车主提车后发现「右后悬架全铝 H 臂有明显打磨痕迹，左右不一致」，售后承认是厂家打磨的铸造工艺瑕疵，未出具书面说明。<b>→ 本清单把「举升看底盘」列为必做项。</b></div>
+  <div class="intel"><span class="d">11-05 / 11-06</span>　<b>香氛机与中岛：</b>车质网 1818917、汽车投诉网 QT347904 两起投诉，均为香氛机频繁断联、售后判定「原车供电触点接触不良」，需拆内饰打磨；其中一例拆修后又引发中岛震动，新车两周内两次拆修。<b>→ 现场就把香氛机装上通电试，别等回家才发现。</b></div>
+  <div class="intel"><span class="d">10-21 / 10-27</span>　<b>两个偶发项：</b>社区仍有车主反馈中岛共振／高速「嗒嗒嗒」异响；另有 N90 Max 车主反馈特定情况下电动门无法打开。官方暂无公开的批次性整改说明。<b>→ 试驾必须包含粗糙路面，电动门要多种方式各试两次。</b></div>
+  <div class="intel"><span class="d">11-02 ~ 11-08</span>　<b>车主提车作业实证：</b>验车重点被反复点名的是「座椅旋转、一键成床、中岛滑轨、电吸门、电动踏板」，以及车漆、玻璃轮胎日期、车架号；实际发现过的小瑕疵包括<b>后排娱乐屏磕碰、雨刮器开裂、座椅缝线不完整</b>。</div>
+  <div class="intel"><span class="d">11-03 ~ 11-05</span>　<b>设计特性（不是故障，但要现场确认能接受）：</b>顶棚拾音口直接冲孔无装饰盖；SOC 低于 20% 时系统强制关闭 9L 冰箱；第三排安全带固定点在 D 柱，座椅前移后较难够到；地板开放式滑轨槽容易掉进零食渣、小零件。</div>
+  <div class="intel"><span class="d">10-14</span>　<b>交付流程：</b>黑猫投诉有车主反映交付中心未按官方标准完成「一对一实车 + 车机功能实操讲解」。<b>→ 讲解讲完再签字。</b></div>
+  <div class="intel"><span class="d">政策延续</span>　<b>车源性质：</b>小米「现车选购」含全新现车、官方展车、<b>准新车</b>。准新车定义为「曾因运输等原因产生维修项的原厂新车，已完成官方修复及售前附加检验」，享完整原厂质保。<b>→ 如果你的车来自现车选购，务必索要《车况确认书》并写明修复部位。</b></div>
+  <div class="intel"><span class="d">11-04</span>　<b>新批次：</b>雷军宣布珍珠白 N90 Max 探索版开启交付，该配色 10 月初才上线选装，属于较新批次。<span class="d">（仅探索版/白色车主相关）</span></div>
+
+  <div class="note">标准说明：下文「里程 ≤50km」「电池 SOH ≥95%」「漆膜 90–160μm」等为行业通用或媒体经验值，用于现场快速判断是否异常；最终判定以小米官方 PDI 检测报告、随车合格证和三包凭证为准。</div>
+</section>
+
+<section>
+  <h2><span class="no">00</span>二、出发前准备（提前一天做完）</h2>
+  <p class="hint">带齐东西，并提前一天用微信和销售把验车条件确认死，避免到店被「流程规定」挡回来。</p>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">01</span>随身物品</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">强光手电（或手机手电）、漆膜仪（可选）、卷尺/塞尺、充电宝、一瓶矿泉水（测冰箱制冷）、纸巾湿巾、手机全程可录像、身份证原件。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">出发前逐样清点；手机留足电量和存储空间（建议至少 3GB）。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">02</span>资料与凭证截图</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">把订单配置页、锁单权益页（首销权益、赠品、积分、HAD 终身免费）、付款凭证、与销售的全部口头承诺聊天记录，提前截图存好并打印或另存一份。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">配置、颜色、轮毂、选装套件、赠品清单一一可对照；口头承诺已要求写进合同备注。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">03</span>提前和销售确认 5 件事</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">微信文字确认：①车架号先发我 ②安排在室外自然光区域验车 ③允许举升底盘 ④允许交付前试驾 10–15km ⑤提供 PDI 检测报告原件。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">五条全部得到明确书面回复；留聊天记录作为凭证。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">04</span>保险与临牌前置比价</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">店内外各要一份保险报价对比；确认交强险+商业险当日即时生效（精确到分钟），不接受次日生效；确认临牌当场办妥。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">保险生效后、临牌到手后才允许车辆上路。</span></div>
+  </div></label>
+</section>
+
+<section>
+  <h2><span class="no">01</span>三、第 0 关：车辆身份与车源（不通过就别往下验）</h2>
+  <p class="hint">这一关 3 分钟，但决定了后面所有检查有没有意义。发现不符，直接谈换车。</p>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">05</span>三码合一 VIN<span class="tag hi">红线</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">核对前挡风玻璃左下角、副驾 B 柱铭牌、机舱横梁、副驾地毯下四处 VIN，并与合格证、发票、订单逐一对照，四处全部拍照。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">17 位车架号逐字符完全一致；差一位即拒绝提车，可能导致无法上牌。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">06</span>铭牌出厂日期 / 是否库存车</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">看副驾 B 柱铭牌上的制造日期，与提车日 2026-11-14 相减。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">≤3 个月为佳（车主经验）；3–6 个月要求书面说明并换油液；&gt;6 个月按库存车处理，需书面说明 + 补偿或更换油液后再签。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">07</span>表显里程</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">通电后读仪表/车机里程，拍照；同时看轮胎胎毛、座椅保护膜是否原厂状态。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">≤50km 正常（PDI + 运输挪车）；50–100km 要求说明来源；&gt;100km 必须书面说明，警惕展车/试驾车。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">08</span>车源性质与修复告知<span class="tag hi">红线</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">直接问「这台是全新现车 / 官方展车 / 准新车？」；准新车＝运输等原因产生维修项、经官方修复及附加检验的原厂新车。要求出示《车况确认书》。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">书面确认车源类型；如为展车或准新车，必须写明修复或整备部位、里程、维修记录，并确认完整原厂质保。不接受口头「都是新车」。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">09</span>配置与选装逐项对照订单</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">对照订单截图核：N90 Max / 探索版、7 色车漆、21 寸四款轮毂、前 255／后 265 鸳鸯胎；豪华套装（2 万：智能电动门、21.4 寸后排娱乐屏、电动迎宾踏板、9L 压缩机冰箱、麂皮绒车顶、主驾外后视镜防眩目）；首销权益（前排旋转座椅、二排双零重力座椅、Nappa 真皮、轮毂券 8000、车漆券 3000、Xiaomi HAD 终身免费）。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">实车配置与订单、发票完全一致；少一项写进交付单，注明补装日期或折价补偿。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">10</span>整车 / 电池 / 电机铭牌</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">核对铭牌上的车型、电池容量（76kWh 三元锂）、电机功率与合格证、一致性证书参数。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">参数一致、铭牌无涂改、无撕换痕迹。</span></div>
+  </div></label>
+</section>
+
+<section>
+  <h2><span class="no">02</span>四、外观漆面（坚持室外自然光，5–8 分钟）</h2>
+  <p class="hint">手机手电 45° 斜照，逆光扫一遍。交付中心的展厅灯光会「吃掉」划痕。</p>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">11</span>运损高发区：车顶、保险杠四角、翼子板<span class="tag hi">重点</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">重点照车顶（运输装卸最易剐蹭、最常被忽略）、前后杠四角、翼子板、门把手内侧、后视镜、门槛下沿、尾门边缘；绕车两圈，一圈平视、一圈蹲下看。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">无划痕、凹陷、掉漆、石子坑；塑料件与金属件之间无明显色差。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">12</span>补漆排查（漆膜仪）</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">先测同车多个原厂部位取基准，再逐面测；重点测车顶、四门、翼子板、前后盖；同时摸门边、翼子板边缘有无飞漆、橘皮、砂纸痕。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">原厂漆一般 90–160μm，同一面相邻点差 ≤30μm；局部 &gt;200μm 或与周边差 &gt;50μm 疑似补漆，要求书面说明并拍照留证。无仪器则以「同部位左右对称对比 + 斜光看色差」为准。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">13</span>缝隙与面差</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">四门、机盖、尾门、前后大灯与车身接缝，左右对称位置对比，用手指或塞尺量；关门后按压车窗边缘看有无松动。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">左右缝隙差 ≤1mm，面差 ≤0.5mm，整圈缝隙宽窄均匀，无单侧翘起。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">14</span>开闭件与胶条</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">四个车门、机盖、尾门、快慢充口盖逐个开关 2 次；检查密封胶条有无翘边、脱胶、破损；半隐藏式门把手弹出回位是否顺畅。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">开闭顺畅无异响、无卡滞，胶条连续贴合；门把手三重冗余机构回位正常。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">15</span>全车玻璃与灯具</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">看玻璃生产批号是否早于整车出厂日期、全车玻璃日期是否基本一致；灯罩有无裂纹、水雾、进水；雨刮胶条翻起来看有无开裂（车主实际反馈过雨刮器开裂）。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">玻璃无裂纹划痕气泡，日期早于整车且相互接近；灯内无水雾；雨刮胶条完整无龟裂。</span></div>
+  </div></label>
+</section>
+
+<section>
+  <h2><span class="no">03</span>五、轮胎与轮毂</h2>
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">16</span>四条轮胎 DOT 生产日期</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">找胎壁四位数字（如 3526 = 2026 年第 35 周），四条逐一记录拍照，与铭牌出厂日期比对。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">四条日期均早于整车出厂日期，相互差 ≤3 个月（最多不超过 6 个月）；品牌型号一致，前 255 / 后 265 鸳鸯胎规格装对位置。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">17</span>胎面 / 轮毂 / 胎压</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">看胎毛是否完整、有无鼓包割伤扎钉；21 寸轮毂四只款式一致、无剐蹭变形，螺栓无拧动痕迹；车机读冷车胎压。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">胎毛完整、无鼓包修补；轮毂无伤；冷车胎压符合 B 柱标签（通常 2.4–2.6bar）。</span></div>
+  </div></label>
+</section>
+
+<section>
+  <h2><span class="no">04</span>六、机舱、三电与增程器（增程车的核心，别只当电车验）</h2>
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">18</span>油液与渗漏</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">打开发动机舱：冷却液壶、刹车油壶液位；机油尺擦净后重插读数、看颜色；手电照管路接头、12V 电瓶接线柱、各螺栓有无拧动/记号移位。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">冷却液/刹车油在 MAX–MIN 之间；机油在 F–L 之间、呈琥珀透明、无发黑乳化；无油渍渗漏，接线紧固。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">19</span>增程器冷启动与介入<span class="tag hi">重点</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">提前交代销售不要热车。冷车状态下用「保电/增程模式」或让交付专员触发增程器启动，原地怠速 3–5 分钟，手扶方向盘感受抖动；再试一次介入瞬间的声音与转速。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">启动平稳低沉、无敲击/摩擦/啸叫；转速稳定不忽高忽低；方向盘、座椅无明显震动。官方宣称增程器介入噪音小于 1 分贝，车内应几乎无感。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">20</span>电池健康度 SOH 与续航表显</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">要求交付用诊断设备或车机读取电池 SOH、循环次数；把充电限值设 100% 看纯电模式预估续航，与订单标定 CLTC（N90 Max 约 462–464km，以你的配置页为准）比对。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">新车 SOH ≥95%、循环次数 &lt;50；表显纯电续航与标定值偏差 ≤10%；仪表与车机无电池/三电故障灯。读数写进 PDI 单。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">21</span>快慢充口与油箱</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">充电枪插入/拔出各 2 次，听有无啸叫、看松紧与盖板开合、指示灯；有条件现场插枪试充 3–5 分钟确认握手成功；看油箱盖密封与油量。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">插拔顺滑无异响、无松动；充电能正常启动；油箱盖密封正常（本车支持 92/95/98 号汽油）。</span></div>
+  </div></label>
+</section>
+
+<section>
+  <h2><span class="no">05</span>七、举升看底盘（本周新增重点，务必争取 3 分钟）</h2>
+  <p class="hint">11/3 车质网出现 N90 Max 右后悬架全铝 H 臂打磨痕迹的投诉，交车前未告知。底盘是运损和工艺瑕疵最容易被藏住的地方。</p>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">22</span>左右悬架 H 臂 / 摆臂对比<span class="tag hi">重点</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">举升后蹲下用手电照左右后悬架全铝 H 臂，对比表面纹理、色泽、有无打磨痕迹、划伤、变形、螺栓拧动印记，左右各拍一张照。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">左右一致、无打磨/补漆/磕碰痕迹。发现不一致：要求出具书面故障与工艺说明、配件合格报告，或换原厂新件后再签收。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">23</span>电池包与护板</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">看电池包下护板有无托底划伤、凹陷变形、渗液；底盘护板是否完整；四轮减振器、传动部位有无渗油锈蚀。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">无托底、无变形、无渗漏、护板齐全；螺栓无拆卸痕迹。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">24</span>无法举升时的兜底</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">至少蹲下用手电照一圈电池包下沿与后悬架；在交付单上明确写「未举升检查底盘」，并请交付专员签字确认。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">有书面备注，保留后续追责空间。</span></div>
+  </div></label>
+</section>
+
+<section>
+  <h2><span class="no">06</span>八、内饰与装配工艺（车主实际踩过的坑）</h2>
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">25</span>七个座椅与缝线</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">2+2+3 逐个看：Nappa 表面无污渍划痕、缝线完整无跳线断线（车主反馈过缝线不完整）、头枕与安全带齐全；按压座椅骨架无松动异响。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">七座全部无破损污渍、缝线连续；保护膜为原厂状态（展车常被撕）。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">26</span>顶棚、屏幕与娱乐屏</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">顶棚无污渍塌陷；21.4 寸后排娱乐屏看有无磕碰划痕，切黑/白/红纯色画面查坏点，翻转机构试一次；中控屏与仪表同样切纯色查坏点。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">无坏点、无漏光、无磕碰；顶棚拾音口直接冲孔属设计（非故障），确认孔位无毛刺堵塞即可。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">27</span>滑动中岛与地板滑轨<span class="tag hi">重点</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">把 1260mm 中岛前后推满全行程，来回 3 次，听有无「嗒嗒」异响或共振；手电照 6 根滑轨槽内有无金属屑、零食渣、异物，盖板是否齐全，滑动座椅试一次确认不卡。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">全行程顺滑、无卡滞异响、锁止牢固；槽内干净无异物。（首批车主反馈中岛共振与高速异响，服务站有时查不出，现场多试几次最划算。）</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">28</span>香氛机 / 闻献套装供电触点<span class="tag hi">本周新增</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">如果选了香氛机等中岛配件，现场就装上通电，连续插拔 / 开关 3 次，看车机是否识别、会不会断连；同时确认供电触点无氧化、无松动。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">每次都能稳定识别、无「离线/断触」；有问题提车前处理，避免新车刚落地就拆内饰（已有车主因此两周内两次拆修）。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">29</span>安全带与第三排人机<span class="tag info">设计确认</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">7 条安全带全部拉到底再回卷、试锁止；把第三排座椅调到最前和最后，各试一次能否顺手够到 D 柱上的安全带。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">回卷顺滑、锁止可靠；够不到属已知设计特性不是故障，但请现场确认家人能接受，别回家才发现。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">30</span>9L 压缩机冰箱</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">通电试制冷、制热，放入自备水瓶，10 分钟后摸温度；顺便问清低电量策略。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">制冷/制热都工作、无异响。注意：SOC 低于 20% 时系统会强制关闭冰箱，属已知逻辑，不是故障，现场确认功能正常即可。</span></div>
+  </div></label>
+</section>
+
+<section>
+  <h2><span class="no">07</span>九、全车功能逐项动作测试（本机特色，约 15 分钟，最花时间但最值）</h2>
+  <p class="hint">多位车主提车作业都强调：N90 有大量特色机构，只验漆面等于没验。逐项动手，别让销售代劳演示。</p>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">31</span>前排座椅 180° 电动旋转</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">用小爱语音和物理按键各触发一次，正反各转到底再回位。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">全行程顺畅无卡滞异响，回位准确，与相邻座椅/中岛无干涉。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">32</span>二排零重力 / 按摩 / 通风加热</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">一二排 16 点按摩、通风、加热各档位开一遍；双零重力座椅展开并复位。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">动作到位、有风有热、无杂音，复位后安全带与滑轨正常。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">33</span>一键成床 / 空间模式切换</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">至少跑「一键成床」和「对坐/会客」两种模式，每个模式都做一次完整复位。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">座椅联动无卡顿、床面平顺、复位到位无报警；行车前座椅必须复位。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">34</span>二三排超长滑轨（最长 1938mm）</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">二排、三排各推到最前和最后，锁止后用手前后晃动座椅。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">全行程顺畅、锁止无松旷、无异响；地板纯平无台阶。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">35</span>智能电动门（6 种开闭方式）<span class="tag hi">重点</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">实体按钮、声纹/语音、屏幕、钥匙、外把手、内把手各试 2 次；试防夹（用软物挡一下，别用手）；让专员演示断电/紧急情况下的手动释放；后排门开到近 90° 看有无干涉。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">每种方式每次都能正常开闭、防夹触发回弹、无异响。10/27 有车主反馈特定情况下电动门打不开，务必多试几次并问清应急开法。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">36</span>电动迎宾踏板</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">随门开合伸缩 3 次，站上去轻踩（若允许）听有无异响。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">伸缩到位、无卡顿异响、无松旷。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">37</span>空气弹簧 + CDC（5 挡）</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">车机里把悬架高度从最低到最高来回切 3 次，下车看四角高度；熄火静置观察。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">10 秒内车身有明显变化、四角同步、压缩机声音均匀；熄火后 10 分钟车身不下沉（下沉＝疑似漏气）。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">38</span>空调 17 出风口 / 25 扬声器</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">制冷、制热各开 3 分钟，手放各区出风口感受温差；播放音乐试听 7.1.4 各声道。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">出风温差 ≥8℃、各区可调、无异味；音响无破音、无单侧无声。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">39</span>全车灯光</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">一人操作、一人绕车看（或用手机前置摄像头）：远近光、日行灯、转向、刹车、倒车、雾灯、双闪、氛围灯、迎宾灯。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">全部点亮、颜色正常、无单侧不亮、无故障报警。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">40</span>车窗 / 天窗 / 雨刮</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">四门车窗一键升降各 ≥4 次（单次测不出偶发卡顿）、用软物试防夹；天窗与遮阳帘开合、关严后从车内看漏光；雨刮各档 + 喷淋。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">升降顺滑无卡顿异响、防夹触发回弹；天窗关严不漏光；雨刮刮净无水痕、胶条无开裂。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">41</span>车机、屏幕与账号</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">16.1 寸中控全屏滑动查触摸死区与延迟；8.88 寸仪表 + HUD 无故障灯；登录自己的小米账号；喊「小爱同学」控制导航/空调/音乐并试车外语音；看 Wi-Fi 7、双 5G、米家互联；确认 OTA 为最新版本。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">无死区无延迟、语音识别准确、账号绑定成功、系统版本为当前最新；无遗留的前任账号/展车演示账号。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">42</span>行车记录仪 U 盘 / ETC / 各接口<span class="tag mid">易漏</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">手套箱找记录仪 U 盘是否插好，录一段并回放；让专员现场协助免费激活内置 ETC；试 USB / Type-C / 无线充电 / V2L 外放电。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">记录仪正常录像回放、ETC 激活、各接口供电正常。（记录仪 U 盘漏插是常见坑，提车后才发现很难追。）</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">43</span>雷达、影像与智驾硬件</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">真人站车后测倒车雷达（别只看屏幕）；看 360 环视拼接、倒车影像清晰度；检查前向激光雷达与后向固态激光雷达外观无磕碰；确认 HAD 满配辅助驾驶权益已绑定到你的账号、功能可开启；涉水雷达问清开启方式。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">雷达报警距离合理、影像无畸变黑屏、传感器无损伤、智驾权益在账号内可见。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">44</span>安全配置与钥匙清点</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">仪表无气囊/制动故障灯；让专员演示门把手三重冗余与机械应急开启；清点钥匙并逐把试锁车/解锁/启动。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">无故障灯、应急机构可用。<b>车主反馈标配仅卡片钥匙，实体机械钥匙需另购</b>：现场确认几把、什么类型，写进交付单。</span></div></div></label>
+</section>
+
+<section>
+  <h2><span class="no">08</span>十、动态试驾（10–15km，绝对不能省）</h2>
+  <p class="hint">出发前确认：保险已生效、临牌已办、电量充足。异响类问题静态查不出来，只能开出来。</p>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">45</span>中岛共振 / 高速异响<span class="tag hi">重点</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">特意走一段粗糙路面和 2–3 个减速带，关掉音乐，让增程器介入一次，听中岛有无「嗒嗒嗒」或共振；有条件上一段高速再听一次。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">无明显周期性异响、无持续共振。有车主反馈服务站多次检查未复现、返程又出现，所以自己开一段最靠谱；有异响当场录音录像并写进交付单。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">46</span>底盘、刹车、转向</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">空悬舒适/运动各跑一段，过坎听有无松散异响；直线轻踩、中踩刹车各试一次；松手（安全路段）看是否跑偏；试运动/舒适模式切换。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">滤震整、无松散异响；刹车初段偏灵敏是调校特性，但不应软塌、跑偏、异响；方向盘无明显虚位与抖动。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">47</span>动能回收与噪音<span class="tag info">体验确认</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">松油门感受拖拽，调到最低档再感受一次；高速段听四门、后视镜风噪与胎噪。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">动能回收不能全关、最低档仍有拖拽感是已知特性，确认自己能接受；高速胎噪偏明显是车主共性反馈，但异常啸叫/漏风要查密封条。</span></div></div></label>
+
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">48</span>泊车/领航功能与大车适应</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">现场试一次自动泊车；让专员演示高速/城区领航已激活状态（不必上路实测）；窄路掉头感受转弯半径、低速视野与 360 影像。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">泊车入位不压线、功能可正常开启、影像清晰；自己能适应 5285mm 车长（无后轮转向，窄车位常需多打一把）。</span></div></div></label>
+</section>
+
+<section>
+  <h2><span class="no">09</span>十一、证件、手续、费用（签字前最后一道）</h2>
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">49</span>六证 + 两把钥匙 + 随车物品<span class="tag hi">红线</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">逐件清点：机动车销售统一发票（发票联/报税联/注册登记联）、整车出厂合格证原件、车辆一致性证书、PDI 检测报告原件、三包凭证、保养手册/说明书、电池与三电质保协议；两把钥匙；三角警示牌、反光背心、拖车钩、补胎工具/充气泵、随车充与放电转接头。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">全部原件齐全、名字与 VIN 正确。合格证必须当场拿到，不接受「抵押在银行」；PDI 单不接受空白单或复印件。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">50</span>费用逐项核对</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">对照结算单核：裸车价（Max 26.99 万 / 探索版 29.99 万）、选装与车漆、购置税（2026 年新能源减半按 5% 征收、单车减税上限 1.5 万，车主实付约 1.19–1.35 万）、保险（车主案例约 8000–8200 元）、上牌（自行去车管所约 120–200 元，店内代办约 390 元）、无忧包/延保是否自愿购买。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">金额与合同一致、无未告知的附加费；保险即时生效、临牌办妥；非自愿的延保/精品一律不签。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">51</span>权益与赠品落到纸面</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">把车膜、脚垫、头枕、积分、电卡、车载桌板、充电桩（含多少米线缆、超出每米多少钱）、保养次数（含不含工时费）、HAD 终身免费绑定账号等，逐条写进合同备注并盖门店公章。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">所有口头承诺均已书面化；赠品当场清点领取并登记，不接受「缺货／活动结束／下次补」。</span></div>
+  </div></label>
+
+  <label class="item"><input type="checkbox"><div class="body">
+    <div class="t"><span class="n">52</span>交付讲解讲完再签字<span class="tag mid">易被缩水</span></div>
+    <div class="row"><span class="k">怎么查</span><span class="v">要求按官方标准完成一对一实车讲解：车机、超级小爱、智驾、增程系统、座椅与中岛机构、充电、应急操作；不熟的功能当场问。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">讲解完成后再签交车单；若现场确实讲不完，要求书面约定补讲时间，再签字。</span></div>
+  </div></label>
+</section>
+
+<section>
+  <h2><span class="no">10</span>十二、探索版专项（仅 29.99 万升降顶舱版适用）</h2>
+  <p class="hint">多一套会动的机构，就多一圈密封边界。普通 SUV 的清单不够用。</p>
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">53</span>顶舱连续升降 2–3 次</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">驻车、非公共道路条件下连续升降 2–3 次，站车外两侧听左右电机是否同步，看有无卡顿、异响、歪斜；让专员演示应急中断/手动关闭方式（车顶阅读灯区危险警告灯开关可中断运行）。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">左右同步、全程平稳无异响，能一键急停与应急关闭。</span></div></div></label>
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">54</span>密封条与篷布</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">手电照一圈接缝，检查四角密封条有无压伤、脱胶、变形；篷布无破损、涂层完好；关顶后开空调听风噪；雨天可请门店淋水试一次。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">密封条连续贴合无压伤、关闭状态车高仅增加约 100mm 且密闭、无漏风漏水。</span></div></div></label>
+  <label class="item"><input type="checkbox"><div class="body"><div class="t"><span class="n">55</span>二层配置与安全功能</div>
+    <div class="row"><span class="k">怎么查</span><span class="v">核对五面纱窗、独立照明、双空调出风口、18W Type-C、磁吸点位、30 寸投影、木纹铝合金地板、三挡地暖、二排一键成床（1.87m×1.24m）；确认锁车降雨提醒、UWB 生物体检测、上方超声波雷达限高预警可用。</span></div>
+    <div class="row"><span class="k">合格标准</span><span class="v ok">配置齐全、功能可用；专员明确说明「仅非公共道路 + 驻车可用」「行车前座椅必须复位」「勿用高压水枪直冲密封缝」。</span></div></div></label>
+</section>
+
+<section>
+  <h2><span class="no">11</span>十三、红线与现场处置</h2>
+  <div class="redline">
+    <ol>
+      <li><b>先验后签：</b>不签字、不付尾款、不签空白 PDI／交车单再验车。销售说「流程规定先签」，就要求见交付经理或换时间。</li>
+      <li><b>不在暗光车库验漆：</b>坚持室外自然光 + 手机手电 45° 斜照。</li>
+      <li><b>全程录像：</b>从绕车、铭牌、里程、底盘、功能测试到手续清点，一镜到底；发现瑕疵先拍照录像再说话。</li>
+      <li><b>不接受口头承诺：</b>「回去 OTA 升级一下就好」「下次来免费处理」一律要求写进交付单，注明处理方案、完成日期、责任人。</li>
+      <li><b>可拒绝签收的重大项：</b>VIN 不符、补漆/运损未告知、里程异常、底盘 H 臂打磨或托底、证件不齐、准新车未书面告知修复项、关键功能失效。这些直接谈换车或退定，别先开回家。</li>
+      <li><b>可整备的一般项：</b>装配缝隙、异响、小瑕疵、单项功能需调试。要求当场整备，或书面约定整备日期与补偿（积分/延长质保/代步），并保留三包权利。</li>
+      <li><b>留证：</b>所有沟通尽量用微信文字；交付单、PDI 报告、维修工单、发票、三包凭证全部拍照存档，后续维权全靠这些。</li>
+    </ol>
+  </div>
+  <div class="note">提醒：交车单签字在法律上意味着你认可车辆状态，提车后再发现问题，举证难度会大幅上升。当天宁可多花一小时，也不要「先开走再说」。</div>
+</section>
+
+<section>
+  <h2><span class="no">12</span>十四、现场问题记录（可填写 / 打印后手写）</h2>
+  <table>
+    <tr><th style="width:34%">发现的问题</th><th style="width:22%">位置 / 证据</th><th>处理结果（当场修 / 书面约定 / 拒收）</th></tr>
+    <tr><td style="height:38px"></td><td></td><td></td></tr>
+    <tr><td style="height:38px"></td><td></td><td></td></tr>
+    <tr><td style="height:38px"></td><td></td><td></td></tr>
+    <tr><td style="height:38px"></td><td></td><td></td></tr>
+    <tr><td style="height:38px"></td><td></td><td></td></tr>
+  </table>
+  <p class="hint no-print" style="margin-top:12px">也可直接在下方临时记一段文字（会自动保存在本机浏览器）：</p>
+  <textarea class="no-print" id="memo" placeholder="例如：右后门缝隙偏大 1.5mm，已拍照，交付专员张三承诺 11/20 前到店调整并写入交付单…"></textarea>
+</section>
+
+<section>
+  <h2><span class="no">来源</span>十五、信息出处（截至 2026-11-10）</h2>
+  <div class="src">
+    1. 车质网投诉 1817363（2026-11-03，右后悬架全铝 H 臂打磨痕迹）：https://www.12365auto.com/zlts/20261103/1817363.shtml<br>
+    2. 车质网投诉 1818917（2026-11-05，香氛机故障 / 中央扶手震动）：https://www.12365auto.com/zlts/20261105/1818917.shtml<br>
+    3. 汽车投诉网 QT347904（2026-11-06，香氛机频繁断联）：https://www.qctsw.com/complaint/detail/347904<br>
+    4. 汽车之家 N90 提车作业（2026-11-02，验车重点与雨刮/缝线/后排屏瑕疵）：https://club.autohome.com.cn/bbs/thread/0823c2cf1c5e480e/116602189-1.html<br>
+    5. 汽车之家 N90 提车经历（2026-11-02）：https://clubajax.autohome.com.cn/bbs/thread/8df9b9eeb27c3867/116602055-1.html<br>
+    6. 新出行《小米澎程 N90 MAX 提车全记录》：https://www.xchuxing.com/article/178441<br>
+    7. 汽车之家澎程用车分享（逐项验车清单）：https://club.m.autohome.com.cn/bbs/thread-c-8326-116602309-1.html<br>
+    8. OFweek 新能源汽车网（2026-11，座椅与小问题汇总）：https://nev.ofweek.com/2026-11/ART-71009-8110-30709747.html<br>
+    9. 什么值得买《上市第 50 天》（共振异响、电动门个案、购置税）：https://post.smzdm.com/p/a4qxk0w7<br>
+    10. 什么值得买《小米新车到了别急着开走》（准现车、车顶运损）：https://post.smzdm.com/p/aggq0257/<br>
+    11. 什么值得买《探索版铺进 108 城》（升顶密封检查）：https://post.smzdm.com/p/az864pz5/<br>
+    12. 腾讯新闻 / 中国经济网（小米准新车官方定义与现车政策）：https://news.qq.com/rain/a/20251212A037JD00<br>
+    13. IT之家 / 新浪财经发布会汇总（配置、豪华套装、首销权益、21 寸鸳鸯胎）：https://www.ithome.com/0/999/461.htm<br>
+    14. 新浪汽车《新车提车验车详细流程》（2026-11-10，SOH ≥95%、六大证件）：https://auto.sina.cn/2026-11-10/detail-iniyetpp2923144.d.html<br>
+    15. 验车帮 / 有驾（通用 PDI、里程、漆面、底盘、签字红线）：https://yanchebang.com/ycbjinfo.php?infoid=1254<br>
+    16. 黑猫投诉（2026-10-14，交付讲解缩水）：https://jx.tousu.sina.com.cn/complaint/view/17402246290<br>
+    17. 百度百科「小米澎程」（2026-11-09 交付数据）：https://baike.baidu.com/item/小米澎程/68177232
+  </div>
+  <div class="note">车主论坛与投诉平台内容为个案反馈，不能等同于批次性质量问题；本清单的作用是把这些「别人踩过的坑」变成你当天要动手按一遍的动作。所有数值标准仅供现场快速判断，最终以小米官方 PDI 报告和随车文件为准。</div>
+</section>
+
+<footer>小米澎程 N90 Max 提车验车清单 · 编制于 2026-11-10 · 提车日 2026-11-14（周六）<br>共 55 项检查动作，勾选状态会保存在本机浏览器；可直接打印带去交付中心。</footer>
+
+</div>
+<script>
+(function(){
+  var KEY='n90max_pdi_20261114_v1';
+  var boxes=Array.prototype.slice.call(document.querySelectorAll('.item input[type=checkbox]'));
+  var cnt=document.getElementById('cnt'), fill=document.getElementById('fill');
+  var memo=document.getElementById('memo');
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){saved={};}
+  function paint(){
+    var n=0; boxes.forEach(function(b){if(b.checked){n++;b.closest('.item').classList.add('done');}else{b.closest('.item').classList.remove('done');}});
+    cnt.textContent='已确认 '+n+' / '+boxes.length;
+    fill.style.width=(boxes.length? (n/boxes.length*100):0)+'%';
+  }
+  function save(){
+    var st={}; boxes.forEach(function(b,i){st[i]=b.checked;}); st.memo=memo.value;
+    try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}
+  }
+  boxes.forEach(function(b,i){
+    if(saved[i]) b.checked=true;
+    b.addEventListener('change',function(){paint();save();});
+  });
+  if(saved.memo) memo.value=saved.memo;
+  memo.addEventListener('input',save);
+  document.getElementById('reset').addEventListener('click',function(){
+    if(!confirm('确定清空全部勾选和备注？')) return;
+    boxes.forEach(function(b){b.checked=false;}); memo.value='';
+    try{localStorage.removeItem(KEY);}catch(e){} paint();
+  });
+  paint();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小米澎程 N90 Max 提车现场速查卡 · 2026-11-14</title>
+<style>
+  @page{size:A4 portrait;margin:7mm}
+  *{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{margin:0;background:#eceff3;color:#1c2128;font:10px/1.38 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+  .bar{position:sticky;top:0;z-index:9;background:#fff;border-bottom:1px solid #dfe5ec;padding:8px 16px;display:flex;gap:10px;align-items:center;font-size:12px}
+  .bar span{color:#5a6572;margin-right:auto}
+  button{border:1px solid #d6dde6;background:#fff;border-radius:5px;padding:4px 10px;font-size:12px;cursor:pointer;color:#1c2128}
+  .page{width:210mm;min-height:297mm;margin:14px auto;background:#fff;padding:8mm;box-shadow:0 3px 18px rgba(0,0,0,.12)}
+  .hd{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:2px solid #1c2128;padding-bottom:5px;margin-bottom:6px}
+  .hd h1{font-size:17px;margin:0;letter-spacing:.5px}
+  .hd .date{font-size:10px;color:#5a6572;text-align:right;line-height:1.5}
+  .cond{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:5px;font-size:9.5px}
+  .cond b{background:#1c2128;color:#fff;border-radius:3px;padding:2px 6px;font-weight:600}
+  .cond i{font-style:normal;background:#f0f3f7;border-radius:3px;padding:2px 6px;color:#5a6572}
+  .redline{background:#fdf0ef;border-left:3px solid #c8362f;padding:5px 8px;margin-bottom:7px;font-size:9.8px;color:#8d2520;font-weight:700;line-height:1.55}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 7mm}
+  .blk{margin-bottom:6px;break-inside:avoid}
+  .blk h2{font-size:10.5px;margin:0 0 3px;padding:2px 6px;background:#eef2f7;border-left:3px solid #1c2128;border-radius:2px;display:flex;justify-content:space-between;align-items:center}
+  .blk h2 em{font-style:normal;font-size:8.5px;color:#5a6572;font-weight:500}
+  .blk.star h2{background:#fff3e2;border-left-color:#c47b12;color:#8a560c}
+  .li{display:flex;gap:5px;padding:2px 3px 2px 0;border-bottom:1px dotted #e7ebf0;line-height:1.4;break-inside:avoid;cursor:pointer}
+  .li:last-child{border-bottom:none}
+  .li:hover{background:#fafbfd}
+  .li input{appearance:none;flex:0 0 10px;width:10px;height:10px;border:1.2px solid #98a5b4;border-radius:2px;margin:3px 0 0;background:#fff;cursor:pointer;position:relative}
+  .li input:checked{background:#1f7a52;border-color:#1f7a52}
+  .li input:checked::after{content:"";position:absolute;left:2.5px;top:0;width:2.5px;height:5px;border:solid #fff;border-width:0 1.5px 1.5px 0;transform:rotate(42deg)}
+  .li.done span{color:#8a9580;text-decoration:line-through;text-decoration-color:#b9c9bd}
+  .li span{flex:1;min-width:0}
+  .li .q{color:#1d5fa8}
+  .li .s{color:#1f7a52;font-weight:700}
+  .li .w{color:#c8362f;font-weight:700}
+  .intel{background:#f7f9fc;border:1px solid #e3e9f0;border-radius:3px;padding:5px 7px;font-size:9px;color:#4a5563;line-height:1.55;break-inside:avoid}
+  .intel b{color:#1d5fa8}
+  .ft{border-top:1px solid #d9e0e8;margin-top:6px;padding-top:5px;font-size:8.6px;color:#7a8490;display:flex;justify-content:space-between;gap:10px}
+  /* 单页 A4 紧凑修正 */
+  body{font-size:9.6px;line-height:1.34}
+  .hd{padding-bottom:3px;margin-bottom:4px}
+  .hd h1{font-size:16px}
+  .cond{margin-bottom:4px}
+  .redline{padding:4px 7px;margin-bottom:5px;font-size:9.2px;line-height:1.45}
+  .blk{margin-bottom:4px}
+  .blk h2{padding:1.5px 5px;margin-bottom:2px;font-size:10.2px}
+  .li{padding:1px 2px 1px 0;line-height:1.33}
+  .li input{margin-top:2px}
+  .intel{padding:4px 6px;font-size:8.8px;line-height:1.45}
+  .ft{margin-top:4px;padding-top:4px}
+  /* 工具条：进度与分区导航（仅屏幕） */
+  .bar{flex-wrap:wrap;gap:6px}
+  .bar-top{display:flex;align-items:center;gap:10px;width:100%;flex-wrap:wrap}
+  .bar .tip{color:#5a6572;margin-right:auto}
+  .prog{font-size:12px;font-weight:700;color:#1f7a52;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .bar-btns{display:flex;gap:6px}
+  .pbar{height:3px;background:#e9edf2;border-radius:9px;width:100%;overflow:hidden}
+  .pbar i{display:block;height:100%;width:0;background:#1f7a52;transition:width .2s}
+  .jump{display:none}
+  @media print{
+    body{background:#fff}
+    .bar{display:none}
+    .no-print{display:none!important}
+    .page{width:auto;min-height:0;margin:0;padding:0;box-shadow:none}
+    .li:hover{background:transparent}
+    .hidecompleted .li.done{display:flex!important}
+  }
+  /* 手机视图：大字号、大勾选框、标准单独成行 */
+  @media screen and (max-width:820px){
+    body{font-size:15px;line-height:1.6;background:#f2f5f8}
+    .bar{padding:8px 10px;gap:0}
+    .bar .tip{font-size:11px;flex-basis:100%;margin:0 0 5px}
+    .tip-extra{display:none}
+    .bar-btns{margin-left:auto}
+    button{font-size:12px;padding:6px 9px;min-height:32px}
+    .prog{font-size:12px}
+    .jump{display:flex;gap:6px;overflow-x:auto;padding:7px 0 2px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .jump::-webkit-scrollbar{display:none}
+    .jump a{flex:0 0 auto;font-size:12px;padding:5px 10px;border:1px solid #d6dde6;border-radius:99px;background:#fff;color:#1c2128;text-decoration:none;white-space:nowrap}
+    .jump a.on{background:#1f7a52;border-color:#1f7a52;color:#fff}
+    .page{width:100%;min-height:0;margin:0;padding:10px;box-shadow:none;background:#f2f5f8}
+    .hd{background:#fff;border:none;border-radius:10px;padding:12px;margin-bottom:9px;align-items:flex-start;gap:8px}
+    .hd h1{font-size:19px;line-height:1.35}
+    .hd .date{font-size:11px;white-space:nowrap}
+    .cond{font-size:11px;gap:5px;margin:8px 0}
+    .cond b,.cond i{font-size:11px;padding:3px 7px}
+    .redline{font-size:12.5px;line-height:1.7;padding:10px 12px;border-radius:8px;margin-bottom:10px}
+    .cols{grid-template-columns:1fr;gap:0}
+    .blk{margin-bottom:10px;background:#fff;border:1px solid #e3e8ee;border-radius:10px;overflow:hidden;scroll-margin-top:112px}
+    .blk h2{font-size:14px;padding:10px 12px;margin:0;border-left:4px solid #1c2128;border-radius:0;background:#eef2f7}
+    .blk h2 em{font-size:11px}
+    .blk.star h2{background:#fff3e2;border-left-color:#c47b12}
+    .li{padding:10px 12px;gap:11px;align-items:flex-start;border-bottom:1px solid #eef1f5;line-height:1.6}
+    .li:last-child{border-bottom:none}
+    .li input{flex:0 0 22px;width:22px;height:22px;margin-top:1px;border-radius:6px;border-width:2px}
+    .li input:checked::after{left:6px;top:2px;width:5px;height:10px;border-width:0 2px 2px 0}
+    .li span{font-size:14px}
+    .li .q{color:#1d5fa8;font-weight:600}
+    .li .w{color:#c8362f}
+    .li .s{display:block;margin-top:5px;padding-left:9px;border-left:2px solid #1f7a52;font-size:13.5px;line-height:1.55;font-weight:600}
+    .intel{font-size:12px;line-height:1.75;padding:11px 12px;border-radius:8px;background:#fff;margin-bottom:10px}
+    .ft{flex-direction:column;gap:4px;font-size:10px;padding:10px 2px 34px}
+    .hidecompleted .li.done{display:none}
+  }
+
+  /* 车型矩阵版新增 */
+  .back{display:inline-block;font-size:11px;color:#1d5fa8;text-decoration:none;padding:2px 0;margin-bottom:4px}
+  .modelnote{font-size:9.5px;color:#5a6572;margin:0 0 5px;line-height:1.5}
+  .tag{display:inline-block;font-size:8.6px;font-weight:700;padding:0 4px;border-radius:3px;margin-left:4px;vertical-align:1px}
+  .tag.hi{background:#fdf0ef;color:#c8362f}
+  .tag.mid{background:#fff7e8;color:#a86a12}
+  .tag.info{background:#eef4fc;color:#1d5fa8}
+  @media screen and (max-width:820px){
+    .back{display:block;font-size:13px;padding:9px 11px;background:#eef4fc;border-radius:8px;margin-bottom:8px;color:#1d5fa8}
+    .modelnote{font-size:11px;line-height:1.6;margin-bottom:8px}
+    .tag{font-size:10px;padding:1px 5px;margin-left:5px}
+    .bar-btns button:first-child{display:none}
+  }
+  @media print{.back{display:none!important}}
+</style>
+</head>
+<body>
+<div class="bar no-print">
+  <div class="bar-top">
+    <span class="tip">现场速查卡 · 勾选自动保存在本机<span class="tip-extra"> · 电脑可打印一张 A4</span></span>
+    <b class="prog" id="prog">已确认 0 / 0</b>
+    <div class="bar-btns">
+      <button onclick="window.print()">打印 / 存 PDF</button>
+      <button id="hideDone">隐藏已勾</button>
+      <button id="reset">重置</button>
+    </div>
+  </div>
+  <div class="pbar"><i id="fill"></i></div>
+  <nav class="jump" id="jump" aria-label="分区快捷跳转"></nav>
+</div>
+
+<div class="page">
+  <a class="back" href="../index.html">← 切换车型</a>
+  <div class="hd">
+    <h1>小米澎程 N90 Max 提车现场速查卡</h1>
+    <div class="date">2026-11-14（周六）<br>预留 60–90 分钟 · 带 1 位同伴</div>
+  </div>
+
+  <div class="cond"><b>适用</b><i>N90 Max（大七座）</i><i>26.99 万</i><i>双电机四驱 · 76kWh</i><i>2 万豪华套装：已选才查</i><i>排产新车（非现车／非准新车）</i><i>已剔除不适用车型项</i></div>
+  <p class="modelnote">本卡按 N90 Max 七座版通用配置编写；07 区「2 万豪华套装」为选装件，未选可跳过。第三排安全带固定在 D 柱属设计特性，现场确认家人能否接受。</p>
+
+  <div class="redline">
+    先验后签 · 不签空白 PDI／交车单 · 不先付尾款再看车 · 坚持室外自然光验漆 · 全程录像 · 问题写进交付单，不接受「回去 OTA 升级就好」· VIN 不符／补漆未告知／里程异常／底盘打磨托底／证件不齐 → 可拒绝签收谈换车
+  </div>
+
+  <div class="cols">
+    <div class="col">
+<div class="blk"><h2>01　开场 3 分钟<em>身份与订单</em></h2>
+<label class="li"><input type="checkbox"><span>三码合一：前挡／B柱／机舱／地毯 VIN 对合格证、发票 <span class="s">→ 17 位逐字符完全一致，差一位即拒提</span></span></label>
+<label class="li"><input type="checkbox"><span>副驾 B 柱铭牌出厂日期 <span class="s">→ ≤3 个月；>6 个月要书面说明＋换油液</span></span></label>
+<label class="li"><input type="checkbox"><span>表显里程＋胎毛／座椅保护膜 <span class="s">→ ≤50km 正常；>100km 书面说明</span></span></label>
+<label class="li"><input type="checkbox"><span>对照订单：小米澎程 N90 Max、车漆、轮毂、2 万豪华套装（智能电动门／21.4 寸后排屏／电动迎宾踏板／9L 冰箱／麂皮顶／主驾外后视镜防眩目） <span class="s">→ 与订单／发票／配置页一致，少一项写进交付单</span></span></label>
+<label class="li"><input type="checkbox"><span>确认是排产新车，非展车／试驾车／准新车 <span class="s">→ 交付单书面写明车辆来源</span></span></label>
+</div>
+<div class="blk"><h2>02　外观漆面<em>室外自然光＋手电 45° 斜照</em></h2>
+<label class="li"><input type="checkbox"><span>车顶、前后杠四角、翼子板、门边、门槛（运损高发） <span class="s">→ 无划痕／凹陷／掉漆／色差</span></span></label>
+<label class="li"><input type="checkbox"><span>漆膜仪逐面测（先取原厂基准） <span class="s">→ 90–160μm、相邻差 ≤30μm；局部 >200μm 疑补漆</span></span></label>
+<label class="li"><input type="checkbox"><span>四门／机盖／尾门／大灯接缝左右对比 <span class="s">→ 缝差 ≤1mm、面差 ≤0.5mm</span></span></label>
+<label class="li"><input type="checkbox"><span>各开闭件、密封胶条、半隐藏门把手开关 2 次 <span class="s">→ 顺畅、无翘边脱胶</span></span></label>
+<label class="li"><input type="checkbox"><span>全车玻璃／灯罩／雨刮胶条 <span class="s">→ 无裂纹水雾、胶条不开裂（车主踩过坑）</span></span></label>
+</div>
+<div class="blk"><h2>03　轮胎与玻璃日期</h2>
+<label class="li"><input type="checkbox"><span>四胎 DOT 四位码＋全车玻璃批号 <span class="s">→ 早于整车出厂；四胎互差 ≤3 个月</span></span></label>
+<label class="li"><input type="checkbox"><span>胎毛、鼓包、轮毂、胎压：21 寸轮毂、前 255 / 后 265 鸳鸯胎 <span class="s">→ 无伤、规格与订单一致；冷车胎压按 B 柱标签</span></span></label>
+</div>
+<div class="blk"><h2>04　机舱 · 三电 · 增程器<em>别只当电车验</em></h2>
+<label class="li"><input type="checkbox"><span>冷却液／刹车油／机油尺＋管路接头、12V 接线 <span class="s">→ MAX–MIN、F–L，琥珀透明、无渗漏</span></span></label>
+<label class="li"><input type="checkbox"><span>冷启动增程器（交代别提前热车）怠速 3–5 分钟 <span class="s">→ 无敲击啸叫、方向盘无明显抖动</span></span></label>
+<label class="li"><input type="checkbox"><span>读 SOH／循环次数、表显纯电续航（标定 CLTC 464km，76kWh 三元锂） <span class="s">→ SOH ≥95%、循环 <50 次、表显偏差 ≤10%</span></span></label>
+<label class="li"><input type="checkbox"><span>快慢充枪插拔 2 次＋试充 3 分钟、油箱盖 <span class="s">→ 无啸叫松动、能握手、密封正常</span></span></label>
+</div>
+<div class="blk"><h2>05　举升看底盘<em>11/3 澎程系列共性提醒</em></h2>
+<label class="li"><input type="checkbox"><span>左右后悬架全铝 H 臂对比拍照（车质网 1817363 打磨痕迹投诉） <span class="s">→ 纹理一致、无打磨；有则书面说明／换件</span></span></label>
+<label class="li"><input type="checkbox"><span>电池包护板、底盘护板、减振器 <span class="s">→ 无托底变形渗漏；不给举升就在交付单写「未举升」</span></span></label>
+</div>
+<div class="blk"><h2>06　内饰装配</h2>
+<label class="li"><input type="checkbox"><span>2+2+3 大七座 / 7 条安全带：座椅表面与缝线、保护膜 <span class="s">→ 无污渍跳线断线（车主踩过坑）</span></span></label>
+<label class="li"><input type="checkbox"><span>全部安全带拉到底回卷＋锁止 <span class="s">→ 回卷顺、锁止可靠</span></span></label>
+<label class="li"><input type="checkbox"><span>6 根滑轨槽内异物、盖板、中控门板缝隙 <span class="s">→ 干净无金属屑、按压无异响</span></span></label>
+</div>
+    </div>
+    <div class="col">
+<div class="blk star"><h2>07　2 万豪华套装验收<em>已选才查 · 未选可跳过</em></h2>
+<label class="li"><input type="checkbox"><span>智能电动门 6 种开闭方式各 2 次＋防夹＋应急手动释放 <span class="s">→ 每次都能开闭（10/27 有偶发打不开）</span></span></label>
+<label class="li"><input type="checkbox"><span>21.4 寸后排娱乐屏黑白红纯色＋翻转机构 <span class="s">→ 无坏点、无磕碰划痕（车主反馈过磕碰）</span></span></label>
+<label class="li"><input type="checkbox"><span>电动迎宾踏板随门伸缩 3 次 <span class="s">→ 到位、无卡顿异响、无松旷</span></span></label>
+<label class="li"><input type="checkbox"><span>9L 压缩机冰箱制冷／制热＋放水瓶 <span class="s">→ 都工作；SOC<20% 自动关闭属已知逻辑</span></span></label>
+<label class="li"><input type="checkbox"><span>麂皮绒车顶＋顶棚 <span class="s">→ 无污渍压痕塌陷；拾音口冲孔是设计非故障</span></span></label>
+<label class="li"><input type="checkbox"><span>主驾外后视镜防眩目 <span class="s">→ 功能可开、镜面无划痕</span></span></label>
+<label class="li"><input type="checkbox"><span>若另购香氛机／闻献套装：装上通电、开关 3 次 <span class="s">→ 不掉线（11/5–11/6 投诉为供电触点不良，避免新车拆内饰）</span></span></label>
+</div>
+<div class="blk"><h2>08　N90 特色机构<em>只验漆面等于没验</em></h2>
+<label class="li"><input type="checkbox"><span>前排 180° 电动旋转（按键＋小爱各一次）、二排零重力／16 点按摩／通风加热 <span class="s">→ 全行程无卡滞、复位无报警</span></span></label>
+<label class="li"><input type="checkbox"><span>一键成床／对坐模式至少各 1 次＋完整复位 <span class="s">→ 床面平顺、行车前座椅可复位</span></span></label>
+<label class="li"><input type="checkbox"><span>二三排超长滑轨推满全程＋滑动中岛来回 3 次 <span class="s">→ 无卡顿、无「嗒嗒」共振、锁止无松旷</span></span></label>
+<label class="li"><input type="checkbox"><span>空气弹簧＋CDC 5 挡来回 3 次 <span class="s">→ 10 秒内升降、四角同步、熄火 10 分钟不下沉</span></span></label>
+<label class="li"><input type="checkbox"><span>17 出风口制冷制热各 3 分钟、25 扬声器、全车灯光 <span class="s">→ 温差 ≥8℃、无破音、全部点亮</span></span></label>
+<label class="li"><input type="checkbox"><span>四门车窗升降 ≥4 次＋防夹、天窗遮阳帘、雨刮喷淋 <span class="s">→ 无卡顿异响、防夹回弹、关严不漏光</span></span></label>
+<label class="li"><input type="checkbox"><span>第三排座椅前后调节＋D 柱安全带够取 <span class="s">→ 各位置都能扣上；够不到属设计特性，现场确认能接受</span></span></label>
+</div>
+<div class="blk"><h2>09　车机 · 账号 · 权益</h2>
+<label class="li"><input type="checkbox"><span>登录本人小米账号、小爱控导航／空调、OTA 最新、HAD 权益绑定 <span class="s">→ 权益在账号内可见、无展车遗留账号</span></span></label>
+<label class="li"><input type="checkbox"><span>行车记录仪 U 盘插好并回放、内置 ETC 激活、USB／Type-C／V2L <span class="s">→ 都能用（U 盘最易漏）</span></span></label>
+<label class="li"><input type="checkbox"><span>雷达与影像：倒车影像、360 环视、真人站车后测倒车雷达 <span class="s">→ 无黑屏畸变；激光雷达／涉水雷达按配置核对</span></span></label>
+<label class="li"><input type="checkbox"><span>仪表与车机：12 个安全气囊、制动、三电 <span class="s">→ 无故障灯报警</span></span></label>
+</div>
+<div class="blk"><h2>10　动态试驾 10–15km<em>保险生效＋临牌到手再开</em></h2>
+<label class="li"><input type="checkbox"><span>关音乐走粗糙路面＋减速带、触发增程器介入 <span class="s">→ 中岛无「嗒嗒」共振（异响当场录音录像）</span></span></label>
+<label class="li"><input type="checkbox"><span>双电机四驱 310kW / 0-100km/h 5.9s：直线加速、刹车直／中踩、松手不跑偏 <span class="s">→ 动力平顺、不软塌不跑偏、无虚位抖动</span></span></label>
+<label class="li"><input type="checkbox"><span>动能回收最低档、自动泊车 1 次、窄路掉头、风噪胎噪 <span class="s">→ 拖拽感能接受、无异常漏风</span></span></label>
+<label class="li"><input type="checkbox"><span>空悬／底盘（若配备）两模式过坎 <span class="s">→ 滤震整、无松散异响</span></span></label>
+</div>
+<div class="blk"><h2>11　手续 · 费用 · 签字</h2>
+<label class="li"><input type="checkbox"><span>发票三联／合格证原件／一致性证书／PDI 原件／三包／手册／三电质保 <span class="s">→ 全齐；合格证不接受「抵押在银行」</span></span></label>
+<label class="li"><input type="checkbox"><span>钥匙清点（车主反馈标配仅卡片钥匙）、三角牌／反光背心／拖车钩／补胎工具 <span class="s">→ 当场清点登记</span></span></label>
+<label class="li"><input type="checkbox"><span>费用核：26.99 万、购置税（2026 减半 5%，约 11900 元）、险约 7000–8200、上牌自办 120–200（店内约 390） <span class="s">→ 与合同一致、无附加费</span></span></label>
+<label class="li"><input type="checkbox"><span>保险精确到分钟当日生效、临牌办妥、赠品与充电桩线缆写进合同盖章、一对一讲解讲完 <span class="s">→ 全部满足再签字</span></span></label>
+</div>
+      <div class="intel"><b>本周情报（决定上面几个「重点」）</b><br>11/3 车质网 1817363：N90 Max 右后悬架全铝 H 臂打磨痕迹，交车未告知 → 必举升对比。11/5 车质网 1818917、11/6 汽车投诉网 QT347904：香氛机断联／供电触点不良，拆修后引发中岛震动 → 提车前发现。10/21、10/27 社区：中岛共振异响、电动门偶发打不开，官方暂无批次整改说明。11/9 澎程单月交付 27,132 台（N90 12,587 台），首批车装配一致性建议多查。截至 11/10 未见官方召回公告。<br>本卡按 N90 Max 七座版通用配置编写；07 区「2 万豪华套装」为选装件，未选可跳过。第三排安全带固定在 D 柱属设计特性，现场确认家人能否接受。 以上车主反馈为个案、非批次质量结论；里程／SOH／漆膜等数值为通用或媒体经验值，最终以小米官方 PDI 报告与随车文件为准。</div>
+    </div>
+  </div>
+
+  <div class="ft">
+    <span>图片与数据来自小米汽车官网及公开车主反馈，仅作识别与验车参考 · 详细版 55 项清单见工作区</span>
+    <span>编制 2026-11-10 · 问题记录：______________________________</span>
+  </div>
+</div>
+
+<script>
+(function(){
+  var MODEL='n90_max', KEY='check_'+MODEL+'_v1';
+  var S = window.AndroidStore ? {
+    load:function(k){return window.AndroidStore.load(k)||'';},
+    save:function(k,v){window.AndroidStore.save(k,v);},
+    last:function(){return window.AndroidStore.last()||'';},
+    setLast:function(id){window.AndroidStore.setLast(id);}
+  } : {
+    load:function(k){return localStorage.getItem(k)||'';},
+    save:function(k,v){localStorage.setItem(k,v);},
+    last:function(){return localStorage.getItem('last_model')||'';},
+    setLast:function(id){localStorage.setItem('last_model',id);}
+  };
+  try{S.setLast(MODEL);}catch(e){}
+
+  var boxes=Array.prototype.slice.call(document.querySelectorAll('.li input'));
+  var blks=Array.prototype.slice.call(document.querySelectorAll('.blk'));
+  var prog=document.getElementById('prog'), fill=document.getElementById('fill');
+  var hideBtn=document.getElementById('hideDone'), jump=document.getElementById('jump');
+  var st={}; try{st=JSON.parse(S.load(KEY)||'{}');}catch(e){st={};}
+
+  function paint(){
+    var n=0;
+    boxes.forEach(function(b){b.closest('.li').classList.toggle('done',b.checked);if(b.checked)n++;});
+    prog.textContent='已确认 '+n+' / '+boxes.length;
+    fill.style.width=(boxes.length?(n/boxes.length*100):0)+'%';
+  }
+  function save(){
+    var o={}; boxes.forEach(function(b,i){o[i]=b.checked;});
+    o.hide=document.body.classList.contains('hidecompleted');
+    try{S.save(KEY,JSON.stringify(o));}catch(e){}
+  }
+  function setHide(on){
+    document.body.classList.toggle('hidecompleted',on);
+    hideBtn.textContent=on?'显示已勾':'隐藏已勾';
+  }
+  boxes.forEach(function(b,i){
+    if(st[i])b.checked=true;
+    b.addEventListener('change',function(){paint();save();});
+  });
+  setHide(!!st.hide);
+
+  var names=['01 开场', '02 外观漆面', '03 轮胎与玻璃日', '04 机舱', '05 举升看底盘', '06 内饰装配', '07 2', '08 N90', '09 车机', '10 动态试驾', '11 手续'];
+  blks.forEach(function(el,i){
+    el.id='blk'+i;
+    var a=document.createElement('a');
+    a.href='#blk'+i; a.textContent=names[i]||String(i+1);
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      el.scrollIntoView({behavior:'smooth',block:'start'});
+      Array.prototype.forEach.call(jump.children,function(x){x.classList.remove('on');});
+      a.classList.add('on');
+    });
+    jump.appendChild(a);
+  });
+  hideBtn.addEventListener('click',function(){
+    setHide(!document.body.classList.contains('hidecompleted')); save();
+  });
+  document.getElementById('reset').addEventListener('click',function(){
+    if(!confirm('清空本车型全部勾选？'))return;
+    boxes.forEach(function(b){b.checked=false;});
+    setHide(false);
+    try{S.save(KEY,'{}');}catch(e){}
+    paint();
+  });
+  paint();
+})();
+</script>
+</body>
+</html>
